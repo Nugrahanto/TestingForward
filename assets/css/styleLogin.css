@@ -1,0 +1,26 @@
+body ,html {
+  background-color: white;
+  height: 100%;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  height: auto;
+  width: 430px;
+  padding: 20px;
+  background-color: white;
+  border: none;
+}
+
+input[type="email"],
+input[type="password"] {
+    border-radius: 10px;
+    border: 2px solid rgb(224, 224, 224);
+}

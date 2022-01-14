@@ -60,3 +60,5 @@ $route['api/category'] = 'api/category/index';
 $route['api/category/add'] = 'api/category/addCategory';
 $route['api/category/update/(:num)'] = 'api/category/updateCategory/$1';
 $route['api/category/delete/(:num)'] = 'api/category/deleteCategory/$1';
+
+$route['admin'] = 'Admin/dashboard';
