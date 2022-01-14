@@ -29,7 +29,7 @@ class Category extends RestController {
                         "status" => 400,
                         "error" => null,
                         "messages" => [
-                            "success" => 'All fields are needed'
+                            "error" => 'All fields are needed'
                         ]
                     ], RestController::HTTP_BAD_REQUEST
                 );
@@ -39,7 +39,7 @@ class Category extends RestController {
                         "status" => 400,
                         "error" => null,
                         "messages" => [
-                            "success" => 'Name category is exist'
+                            "error" => 'Name category is exist'
                         ]
                     ], RestController::HTTP_BAD_REQUEST
                 );
@@ -65,7 +65,7 @@ class Category extends RestController {
                         "status" => 500,
                         "error" => null,
                         "messages" => [
-                            "success" => 'Failed to add category'
+                            "error" => 'Failed to add category'
                         ]
                     ], RestController::HTTP_INTERNAL_SERVER_ERROR
                 );
@@ -106,7 +106,7 @@ class Category extends RestController {
                     "status" => 400,
                     "error" => null,
                     "messages" => [
-                        "success" => 'Field is empty'
+                        "error" => 'Field is empty'
                     ]
                 ], RestController::HTTP_BAD_REQUEST
             );   
@@ -131,7 +131,7 @@ class Category extends RestController {
                     "status" => 400,
                     "error" => null,
                     "messages" => [
-                        "success" => 'Failed to delete category'
+                        "error" => 'Failed to delete category'
                     ]
                 ], RestController::HTTP_BAD_REQUEST
             );   

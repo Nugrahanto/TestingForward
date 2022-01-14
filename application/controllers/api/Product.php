@@ -41,7 +41,7 @@ class Product extends RestController {
                         "status" => 400,
                         "error" => null,
                         "messages" => [
-                            "success" => 'All fields are needed'
+                            "error" => 'All fields are needed'
                         ]
                     ], RestController::HTTP_BAD_REQUEST
                 );
@@ -51,7 +51,7 @@ class Product extends RestController {
                         "status" => 400,
                         "error" => null,
                         "messages" => [
-                            "success" => 'Name product must be unique'
+                            "error" => 'Name product must be unique'
                         ]
                     ], RestController::HTTP_BAD_REQUEST
                 );
@@ -101,7 +101,7 @@ class Product extends RestController {
                             "status" => 500,
                             "error" => null,
                             "messages" => [
-                                "success" => 'Failed to add product'
+                                "error" => 'Failed to add product'
                             ]
                         ], RestController::HTTP_INTERNAL_SERVER_ERROR
                     );
@@ -112,7 +112,7 @@ class Product extends RestController {
                         "status" => 400,
                         "error" => null,
                         "messages" => [
-                            "success" => 'Image are empty'
+                            "error" => 'Image are empty'
                         ]
                     ], RestController::HTTP_BAD_REQUEST
                 );
