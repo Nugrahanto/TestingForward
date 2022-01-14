@@ -57,32 +57,34 @@ class Product extends RestController {
                 );
             }
         } else {
-            if(!empty($_FILES['image']['name'])){
-                $config = array(
-                    'upload_path' => "./uploads/",
-                    'allowed_types' => "gif|jpg|png|jpeg|pdf",
-                    'overwrite' => TRUE
-                );
+            
+            // if(!empty($_FILES['image']['name'])){
+            //     $config = array(
+            //         'upload_path' => "./uploads/",
+            //         'allowed_types' => "gif|jpg|png|jpeg|pdf",
+            //         'overwrite' => TRUE
+            //     );
                 
-                //Load upload library and initialize here configuration
-                $this->load->library('upload',$config);
-                if($this->upload->do_upload('image')) {
-                    $uploadData = $this->upload->data();
-                    $image = $uploadData['file_name'];
-                } else {
-                    $image = '';
-                }
-            }else{
-                $image = '';
-            }
-            $uploads = base_url('uploads/'.$image.'');
+            //     //Load upload library and initialize here configuration
+            //     $this->load->library('upload',$config);
+            //     if($this->upload->do_upload('image')) {
+            //         $uploadData = $this->upload->data();
+            //         $image = $uploadData['file_name'];
+            //     } else {
+            //         $image = '';
+            //     }
+            // }else{
+            //     $image = '';
+            // }
+            // $uploads = base_url('uploads/'.$image.'');
+
             if(!empty($id_cat) && !empty($name) && !empty($price) && !empty($desc) && !empty($image)){
                 $data = [
                     'id_cat' => $id_cat,
                     'name' => $name,
                     'price' => $price,
                     'desc' => $desc,
-                    'image' => $uploads
+                    'image' => $image
                 ];
                 $product = $this->ModelProduct->post_product($data);
                 if($product){

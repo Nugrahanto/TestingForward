@@ -1,13 +1,7 @@
 <div class="row">
   <div class="col-md-12 fw-bold fs-3 mb-2">Category</div>
   <div class="mb-3">
-  <?php 
-    $message = $this->session->flashdata('message'); 
-    if (isset($message)) {
-        echo $message;
-        $this->session->unset_userdata('message');
-    } ?>
-    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+  <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
       <span><i class="bi bi-plus-circle"></i></span> Add Category
     </button>
   </div>
