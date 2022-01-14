@@ -52,3 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['api/product'] = 'api/product/index';
+$route['api/product/add'] = 'api/product/addProduct';
+$route['api/product/(:num)'] = 'api/product/productById/$1';
+$route['api/category'] = 'api/category/index';
+$route['api/category/add'] = 'api/category/addCategory';
+$route['api/category/update/(:num)'] = 'api/category/updateCategory/$1';
+$route['api/category/delete/(:num)'] = 'api/category/deleteCategory/$1';
