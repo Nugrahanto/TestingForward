@@ -11,7 +11,9 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
     if ($this->session->userdata('logged_in') == TRUE && $this->session->userdata('level') == 1) {
-		  $this->load->view('admin/dashboard');
+			$data['title'] = 'Dashboard';
+			$data['main_view'] = 'admin/dashboard';
+		  $this->load->view('admin/template', $data);
     } else {
 			redirect('login','refresh');
 		}
