@@ -50,7 +50,7 @@
             <option selected disabled>Select Category</option>
             <?php 
             foreach ($category as $data) { ?>
-            <option value="<?= $data['id_cat'] ?>"><?= $data['name']; ?></option>
+            <option value="<?= $data['id_cat'] ?>"><?= $data['name_cat']; ?></option>
             <?php } ?>
           </select>
         </div>

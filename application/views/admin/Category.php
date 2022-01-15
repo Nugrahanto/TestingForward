@@ -21,9 +21,9 @@
             <tr>
               <td><?=$no?></td>
               <td><?= $data['id_cat']; ?></td>
-              <td><?= $data['name']; ?></td>
+              <td><?= $data['name_cat']; ?></td>
               <td class="text-center">
-                <button type="button" id="editCategory" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data['id_cat'] ?>" data-name="<?=$data['name']?>">Edit</button>
+                <button type="button" id="editCategory" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $data['id_cat'] ?>" data-name="<?=$data['name_cat']?>">Edit</button>
                 <a href="<?php echo base_url(); ?>admin/category/deleteCategory/<?= $data['id_cat'];?>" class="btn btn-sm btn-danger">Delete</a>
               </td>
             </tr>
@@ -44,7 +44,7 @@
       <div class="modal-body">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-          <input type="text" class="form-control" name="name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" name="name_cat" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="modal-footer">
@@ -69,11 +69,11 @@
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-          <input type="text" class="form-control" id="name" name="name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" id="name" name="name_cat" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="modal-footer">
-      <input type="submit" class="btn btn-success" name="submit" value="Add Category">
+      <input type="submit" class="btn btn-success" name="submit" value="Edit Category">
       </div>
       </form>
     </div>

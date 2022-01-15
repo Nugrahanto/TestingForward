@@ -26,7 +26,7 @@ class Category extends CI_Controller {
 		if ($this->session->userdata('logged_in') == TRUE && $this->session->userdata('level') == 1) {
 			if ($this->input->post('submit')) {				
 				$data = [
-					'name' => $this->input->post('name')
+					'name_cat' => $this->input->post('name_cat')
 				];
 				$insert = $this->curl->simple_post($this->api.'/add',$data,array(CURLOPT_BUFFERSIZE=>10));
 				redirect('admin/category','refresh');
@@ -42,7 +42,7 @@ class Category extends CI_Controller {
 			if ($this->input->post('submit')) {				
 				$id_cat = $this->input->post('id_cat');
 				$data = [
-					'name' => $this->input->post('name')
+					'name_cat' => $this->input->post('name_cat')
 				];
 				$update = $this->curl->simple_put($this->api.'/update/'.$id_cat,$data,array(CURLOPT_BUFFERSIZE=>10));
 				redirect('admin/category','refresh');

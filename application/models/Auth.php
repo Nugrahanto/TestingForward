@@ -11,11 +11,11 @@ class Auth extends CI_Model {
 		$query = $this->db->where('username', $username)
 						  ->where('password', $password)
 						  ->where('level', $level)
-						  ->get('tb_user');
+						  ->get('tb_admin');
 
 		if ($query->num_rows() > 0) {
 			$data = array(
-				'id_user' 	=> $query->row()->id_user,
+				'id_admin' 	=> $query->row()->id,
 				'username'  => $query->row()->username,
 				'name'   	  => $query->row()->name,
         'level'   	  => $query->row()->level,

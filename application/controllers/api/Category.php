@@ -17,12 +17,12 @@ class Category extends RestController {
     }
 
     public function addCategory_post(){
-        $name = $this->input->post('name');
+        $name = $this->input->post('name_cat');
 
-        $this->form_validation->set_rules('name', 'Name', 'required|is_unique[tb_category.name]');
+        $this->form_validation->set_rules('name_cat', 'Name', 'required|is_unique[tb_category.name_cat]');
 
         if ($this->form_validation->run() == FALSE) {
-            $check = $this->db->where('name', $name)->get('tb_category')->row();
+            $check = $this->db->where('name_cat', $name)->get('tb_category')->row();
             if(empty($name)){
                 $this->response(
                     [
@@ -46,7 +46,7 @@ class Category extends RestController {
             }
         } else {
             $data = [
-                'name' => $name
+                'name_cat' => $name
             ];
             $category = $this->ModelCategory->post_category($data);
             if($category){
@@ -77,12 +77,12 @@ class Category extends RestController {
         try
         {
             $this->form_validation->set_data($this->put());
-            $this->form_validation->set_rules('name', 'Name', 'required');
+            $this->form_validation->set_rules('name_cat', 'Name', 'required');
 
             if(!$this->form_validation->run()) throw new Exception(validation_errors());
 
             $data = [
-                'name' => $this->put('name')
+                'name_cat' => $this->put('name_cat')
             ];
             $category = $this->ModelCategory->put_category($id_cat, $data);
             if($category){
