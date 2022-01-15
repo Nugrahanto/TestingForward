@@ -21,7 +21,9 @@
     <div class="container">
       <h2 class="mt-2">Produk</h2>
       <div class="row">
-      <?php foreach ($product as $data) { ?>
+      <?php 
+      if ($product != NULL) {
+        foreach ($product as $data) { ?>
         <div class="col-md-3 mb-3">
           <div class="card h-100">
             <img src="<?= $data['image']; ?>" class="card-img-top" alt="Product Image">
@@ -37,6 +39,11 @@
             </div>
           </div>
         </div>
+        <?php }
+        } else { ?>
+          <div class="container my-5">
+            <strong>Sorry, there are no products ready.</strong>
+          </div>
         <?php } ?>
       </div>
     </div>
